@@ -1,0 +1,8 @@
+#!/bin/bash
+[[ -f ./setup ]] && source ./setup
+
+SUEXEC=${SUEXEC:-"root"}
+
+pushd /root > /dev/null
+    exec su-exec ${SUEXEC} drone-server
+popd
