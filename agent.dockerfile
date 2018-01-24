@@ -1,8 +1,7 @@
-FROM gjchen/alpine:3.6
+FROM gjchen/alpine:3.7
 MAINTAINER gjchen <gjchen.tw@gmail.com>
 
-ENV	GOPATH="/tmp/go" \
-	PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ENV	GOPATH="/tmp/go"
 
 RUN	apk --no-cache --no-progress upgrade -f && \
 	apk --no-cache --no-progress add ca-certificates git bash sqlite && \
