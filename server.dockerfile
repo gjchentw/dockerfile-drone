@@ -16,7 +16,7 @@ RUN	apk --no-cache --no-progress upgrade -f && \
 	mkdir -p /tmp/go && ln -s /usr/local/bin /tmp/go/bin && \
 	go get -ldflags '-extldflags "-static" -X github.com/drone/drone/version.VersionDev='$(date +%Y%m%d) github.com/drone/drone/cmd/drone-server && \
 	go get -ldflags '-extldflags "-static" -X github.com/drone/drone/version.VersionDev='$(date +%Y%m%d) github.com/drone/drone/cmd/drone-agent && \
-	rm -rf /tmp/go/github.com/drone/ && \
+	rm -rf /tmp/go/ && \
 	apk --no-progress del build-deps
 	
 ADD	s6.d /etc/s6.d
