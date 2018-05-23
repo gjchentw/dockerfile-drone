@@ -21,5 +21,4 @@ RUN	apk --no-cache --no-progress upgrade -f && \
 	
 ADD	s6.d /etc/s6.d
 
-VOLUME	["/var/lib/drone"]
 EXPOSE	80 443 9000
