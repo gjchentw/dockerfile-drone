@@ -1,4 +1,4 @@
-FROM gjchen/alpine:3.7
+FROM gjchen/alpine:3.8
 MAINTAINER gjchen <gjchen.tw@gmail.com>
 
 ENV	GOPATH="/tmp/go"
